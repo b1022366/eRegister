@@ -14,7 +14,7 @@ new Course(courseCode:'000002c' ,
 courseName:'Web Architectures',
 description:'Headache for students').save();
 
-def new_class = new RegClass(name:'WebArch-Mondays' ,
+def new_class = RegClass.findByName('WebArch-Mondays') ?: new RegClass(name:'WebArch-Mondays' ,
  classInstructor:chris_instructor, 
  course:web_arch_course).save()
 }
